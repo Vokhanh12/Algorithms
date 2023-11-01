@@ -18,7 +18,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
 
             //ll.displayToDirecNext();
-            ll.displayToDirecPrev();
+            //ll.displayToDirecPrev();
+            Console.WriteLine(""+ll.Find(100));
         }
     }
 }

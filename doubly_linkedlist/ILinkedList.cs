@@ -12,7 +12,7 @@ interface ILinkedList{
 
     void addFirst(Node newNode);
 
-    Node Find(object obj);
+    bool Find(int data);
 
     Node findNodeAfter(int value);
 

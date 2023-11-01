@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lqkx5yaSFfX+xdv+ud7I6zAUVqlMuBA2FgZDGrkekbrrwUDYGPA7oKvejE2JFRhaL8wfLf7GWkhfzfn8wSv4ZA==",
+  "dgSpecHash": "6I84NdGr7Ii70pHxV+9gdMWfvHJtWEyG5KnM5mSoAtXKxTvaqYVAt1Zbl+IF4XLeV0o6IoXLStLpsYvONEbl4w==",
   "success": true,
-  "projectFilePath": "/home/vokhanh/development/csharp/doubly_linkedlist/doubly_linkedlist.csproj",
+  "projectFilePath": "/home/vokhanh/development/Algorithms/doubly_linkedlist/doubly_linkedlist.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

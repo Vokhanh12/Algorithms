@@ -1,6 +1,15 @@
+
+enum Direction
+{
+    left,
+    right
+}
+
 class LinkedList : ILinkedList
 {
-    private Node? head;
+    private Node? _head;
+
+    private Direction _direction = Direction.right;
 
     public Node addAfter(Node indexNode, Node newNode)
     {
@@ -9,14 +18,14 @@ class LinkedList : ILinkedList
 
     public void addFirst(Node newNode)
     {
-        if(head == null)
-            head = newNode;
+        if(_head == null)
+            _head = newNode;
         else
         {
 
-            newNode.next = head;
-            head.prev = newNode;
-            head = newNode;
+            newNode.next = _head;
+            _head.prev = newNode;
+            _head = newNode;
 
 
 
@@ -40,10 +49,7 @@ class LinkedList : ILinkedList
         throw new NotImplementedException();
     }
 
-    public Node Find(object obj)
-    {
-        throw new NotImplementedException();
-    }
+    
 
     public Node findLastMaxSrt()
     {
@@ -93,12 +99,12 @@ class LinkedList : ILinkedList
 
     public void displayToDirecNext()
     {
-        displayHelperNext(head);
+        displayHelperNext(_head);
     }
 
     public void displayToDirecPrev()
     {
-        displayHelperPrev(head);
+        displayHelperPrev(_head);
     }
 
     private void displayHelperNext(Node nodeHead)
@@ -120,29 +126,52 @@ class LinkedList : ILinkedList
             return;
         }
 
-        if(nodeHead.next != null)
-        {
-            displayHelperPrev(nodeHead.next);
-        }
-        else
-        {
-            if(nodeHead.prev != null)
+            if(nodeHead.next != null && _direction == Direction.right)
             {
-                Console.WriteLine($"{nodeHead.data}");
-                Thread.Sleep(2000);
-                displayHelperPrev(nodeHead.prev);
-
+                displayHelperPrev(nodeHead.next);
             }
             else
             {
-                Console.WriteLine($"{nodeHead.data}");
-                return;
+                _direction = Direction.left;
 
-            } 
+                if(nodeHead.prev != null && _direction == Direction.left)
+                {
+                    Console.WriteLine($"{nodeHead.data}");
+                    Thread.Sleep(2000);
+                    displayHelperPrev(nodeHead.prev);
 
-        }
+                }
+                else
+                {
+                    Console.WriteLine($"{nodeHead.data}");
+                    return;
+
+                } 
+
+            }
+            
         
 
-    } 
+    }
 
+    public bool Find(int data)
+    {
+        return FindHelper(_head,data);
+    }
+
+
+    public bool FindHelper(Node head,int data)
+    {
+        if(head != null)
+        {
+            if(head.data == data)
+            return true;
+            else
+            return FindHelper(head.next,data);
+        }
+    
+        return false;
+    }
+
+   
 }

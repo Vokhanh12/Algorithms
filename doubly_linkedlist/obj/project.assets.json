@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/vokhanh/development/csharp/doubly_linkedlist/doubly_linkedlist.csproj",
+      "projectUniqueName": "/home/vokhanh/development/Algorithms/doubly_linkedlist/doubly_linkedlist.csproj",
       "projectName": "doubly_linkedlist",
-      "projectPath": "/home/vokhanh/development/csharp/doubly_linkedlist/doubly_linkedlist.csproj",
+      "projectPath": "/home/vokhanh/development/Algorithms/doubly_linkedlist/doubly_linkedlist.csproj",
       "packagesPath": "/home/vokhanh/.nuget/packages/",
-      "outputPath": "/home/vokhanh/development/csharp/doubly_linkedlist/obj/",
+      "outputPath": "/home/vokhanh/development/Algorithms/doubly_linkedlist/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/vokhanh/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.123/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.124/RuntimeIdentifierGraph.json"
       }
     }
   }
