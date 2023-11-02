@@ -17,9 +17,24 @@ namespace MyApp // Note: actual namespace depends on the project name.
             ll.addFirst(new Node(6));
 
 
-            //ll.displayToDirecNext();
+            ll.displayToDirecNext();
             //ll.displayToDirecPrev();
             Console.WriteLine(""+ll.Find(100));
+
+
+            Console.WriteLine($"Head:{ll.Head.data} Tail:{ll.Tail.data}");
+
+
+            ll.addLast(new Node(9));
+
+            ll.displayToDirecNext();
+
+            Console.WriteLine(""+ll.Find(9));
+
+             Console.WriteLine($"Head:{ll.Head.data} Tail:{ll.Tail.data}");
+
+
+
         }
     }
 }

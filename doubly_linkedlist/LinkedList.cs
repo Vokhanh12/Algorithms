@@ -1,4 +1,6 @@
 
+using System.Dynamic;
+
 enum Direction
 {
     left,
@@ -8,6 +10,8 @@ enum Direction
 class LinkedList : ILinkedList
 {
     private Node? _head;
+
+    private Node? _tail;
 
     private Direction _direction = Direction.right;
 
@@ -19,24 +23,52 @@ class LinkedList : ILinkedList
     public void addFirst(Node newNode)
     {
         if(_head == null)
+        {
             _head = newNode;
+            _tail = newNode;
+        }
         else
         {
 
-            newNode.next = _head;
+
+             newNode.next = _head;
             _head.prev = newNode;
             _head = newNode;
-
-
-
 
 
         }
     }
 
+    public Node? Head
+    {
+        get => _head;
+        set => _head = value;
+    }
+
+
+    public Node? Tail
+    {
+        get => _tail;
+        set => _tail = value;
+    }
+
+
     public void addLast(Node newNode)
     {
-        throw new NotImplementedException();
+
+        if(_tail == null)
+        {
+            _head = newNode;
+            _tail = newNode;
+        }
+        else
+        {
+            newNode.next = null;
+            newNode.prev = _tail;
+            _tail = newNode;
+        }
+
+
     }
 
     public double average()
